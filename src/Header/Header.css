@@ -1,0 +1,121 @@
+/* Apply background color to the entire body */
+body {
+  background-color: #7DF9FF; /* Light blue background color for the body */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Styles for the side window */
+.dropdown-side-window {
+  position: fixed;
+  top: 56px; /* Set to the height of the header */
+  left: 0;
+  width: 4rem; /* Start with a narrow width */
+  height: calc(100vh - 56px); /* Full viewport height minus navbar height */
+  background-color: #f0f8ff; /* Lighter blue background color for the sidebar */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: add shadow */
+  transition: width 0.3s ease-in-out;
+  z-index: 1050; /* Ensure it is above other content */
+  overflow-y: auto;
+}
+
+.dropdown-side-window:hover,
+.dropdown-side-window.open {
+  width: 20rem; /* Expand width on hover and when open */
+}
+
+.dropdown-content {
+  padding: 1rem;
+  padding-top: 0; /* Reset top padding inside content */
+  height: 100%; /* Ensure content fills the side window */
+}
+
+.dropdown-content .dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.dropdown-content .dropdown-item .side-logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.dropdown-content .dropdown-item .text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.dropdown-side-window:hover .dropdown-item .text,
+.dropdown-side-window.open .dropdown-item .text {
+  display: inline;
+}
+
+.close-button {
+  display: none;
+  text-align: right;
+  padding: 0.5rem;
+}
+
+.dropdown-side-window:hover .close-button,
+.dropdown-side-window.open .close-button {
+  display: block;
+}
+
+/* Navbar styles */
+.navbar {
+  height: 56px !important; /* Set the height of the navbar */
+ 
+}
+
+.navbar-brand {
+  font-weight: normal; /* Default font weight */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-brand:hover {
+  font-weight: bold; /* Make text bold on hover */
+  text-decoration: underline; /* Add underline on hover */
+  color: inherit; /* Ensure text color remains consistent */
+}
+
+/* Align the EXPLORE link to the left */
+.navbar-nav {
+  flex-direction: row; /* Ensure items are in a row */
+}
+
+.navbar-nav .nav-link {
+  margin-left: 1rem; /* Add spacing between items */
+  color: white !important; /* Ensure nav link text is white */
+}
+
+/* Optional: additional styles for the EXPLORE link */
+.nav-link.active {
+  font-weight: bold; /* Highlight the active link */
+}
+
+.explore {
+  padding-left: 1rem;
+  color: white !important; /* Ensure EXPLORE text is white */
+}
+
+/* Adjust the size of the icons */
+.icon-logo {
+  width: 24px;
+  height: 24px;
+  fill: white; /* Ensure icon is white */
+}
+
+/* Prevent logo from rotating */
+.logo {
+  width: 50px;
+  height: 50px;
+  transform: none !important; /* Ensure no transformation is applied */
+}
+
+.add-new {
+  height: 50px;
+  width: 50px;
+}

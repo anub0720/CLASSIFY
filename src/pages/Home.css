@@ -1,0 +1,98 @@
+.home-container {
+  position: fixed;
+  top: 56px; /* Full viewport height minus navbar height */
+  left: 4rem; /* Start after the sidebar width */
+  width: calc(100vw - 4rem); /* Full width minus the sidebar width */
+  height: calc(100vh - 56px); /* Full height minus the navbar height */
+  background-image: url('../assets/image.png'); /* Path to your background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Apply shadow over the entire container */
+}
+
+.intro-content {
+  position: relative; /* Ensure the intro content is above the overlay */
+  z-index: 2; /* Place the content above the overlay */
+  padding: 4rem 3rem;
+  border-radius: 15px;
+
+  background: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+  color: #E0F7FA; /* Light blue color for text */
+}
+
+.intro-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  color: #E0F7FA;
+}
+
+.intro-content h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: rgba(0, 0, 0, 0.3); /* Shadow color */
+  z-index: -1;
+}
+
+.intro-content p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  max-width: 800px; /* Restrict the width for better readability */
+  margin: 0 auto;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Slightly enhanced 3D effect for text */
+}
+/* Home.css */
+/* Home.css */
+
+
+.intro-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  width: calc(100vw - 4rem); /* Full width minus the sidebar width */
+  height: calc(100vh - 56px);
+  background: rgba(0, 0, 0, 0.3); /* Slightly transparent white background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  margin-bottom: 17.76rem;
+}
+
+.intro-content h1 {
+  font-size: 5rem;
+  color: #7DF9FF;
+  margin-bottom: 1rem;
+  font-family: 'Arial', sans-serif; /* Change font */
+}
+
+.intro-content p {
+  font-size: 1.5rem;
+  color: #FFFFE2;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif; /* Change font */
+}
+#calendar {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.35); /* Darker semi-transparent background */
+  color: #FFFFE9; /* Light blue color for text */
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
