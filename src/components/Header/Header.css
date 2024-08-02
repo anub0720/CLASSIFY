@@ -3,6 +3,14 @@ body {
   background-color: #7DF9FF; /* Light blue background color for the body */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7DF9FF; /* Ensure the background color covers the entire viewport */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; 
 }
 
 /* Styles for the side window */
@@ -12,7 +20,7 @@ body {
   left: 0;
   width: 4rem; /* Start with a narrow width */
   height: calc(100vh - 56px); /* Full viewport height minus navbar height */
-  background-color: #f0f8ff; /* Lighter blue background color for the sidebar */
+  background-color:  #00BFFF; /* Lighter blue background color for the sidebar */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: add shadow */
   transition: width 0.3s ease-in-out;
   z-index: 1050; /* Ensure it is above other content */
@@ -66,7 +74,6 @@ body {
 /* Navbar styles */
 .navbar {
   height: 56px !important; /* Set the height of the navbar */
- 
 }
 
 .navbar-brand {
@@ -97,7 +104,7 @@ body {
 }
 
 .explore {
-  padding-left: 1rem;
+  padding-left: 1rem !important;
   color: white !important; /* Ensure EXPLORE text is white */
 }
 

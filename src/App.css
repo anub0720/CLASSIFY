@@ -1,0 +1,13 @@
+    /* Global CSS file (e.g., styles.css) */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #7DF9FF; /* Ensure the background color covers the entire viewport */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+  }
+  

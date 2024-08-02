@@ -4,7 +4,7 @@
   left: 4rem; /* Start after the sidebar width */
   width: calc(100vw - 4rem); /* Full width minus the sidebar width */
   height: calc(100vh - 56px); /* Full height minus the navbar height */
-  background-image: url('../assets/image.png'); /* Path to your background image */
+  background-image: url('../../assets/image.png'); /* Path to your background image */
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
