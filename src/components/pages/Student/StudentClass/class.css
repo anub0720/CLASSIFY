@@ -1,0 +1,153 @@
+.class-container {
+    background-color: #7DF9FF;
+    position: absolute;
+    top: 3.5rem; /* Adjust according to the navbar height */
+    left: 4rem; /* Adjust according to the sidebar width */
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 16px;
+    padding: 20px;
+    justify-content: flex-start; /* Aligns cards to start, preventing centering overflow */
+    align-items: flex-start; /* Aligns items to start, allows for a uniform top alignment */
+    background-image: url('../../../../assets/class.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    overflow-x: hidden; /* No horizontal overflow */
+    overflow-y: auto; /* Enables vertical scrolling */
+    
+
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+    top:1rem;
+    width: 100%; /* Full width minus the sidebar width */
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.45); Darker semi-transparent background */
+    color: #FFFFE9; /* Light blue color for text */
+    padding: 0.5rem;
+    left:4rem;
+    right:0;
+    width:calc(100vw-56px);
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .sections{
+    position:absolute;
+    top:4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .section{
+
+    padding:2rem 1rem;
+  }
+  .content h1{
+    position: absolute;
+  top: 1rem;
+  font-weight: bolder;
+  color:#7DF9FF
+  }
+  .schedule {
+    position: absolute;
+    top: 3rem;
+    left:2rem;
+    width: auto; /* Adjust as needed */
+    max-width: 600px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    font-size: medium;
+    background: rgba(0, 0, 0, 0.555);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .section {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .section:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  @media (max-width: 768px) {
+    .class-container {
+      left: 0;
+      padding: 10px;
+      gap: 10px;
+    }
+  
+    .content {
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    .sections {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .section {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .class-container {
+      padding: 5px;
+    }
+  
+    .sections {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+  
+    .section {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+  
+    .content h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Specific adjustments for iPhone 14 Pro Max and similar screens */
+  @media (max-width: 430px) {
+    .sections {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.25rem;
+      padding: 0 0.5rem;
+    }
+  
+    .section {
+      padding: 0.5rem;
+      font-size: 0.75rem; /* Reduce font size */
+    }
+  }
+  

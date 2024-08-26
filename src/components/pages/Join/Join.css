@@ -1,0 +1,35 @@
+.join-container {
+    background-color: #7df9ff;
+    position: absolute;
+    top: 3.5rem; /* Adjust according to the navbar height */
+    left: 4rem; /* Adjust according to the sidebar width */
+    width: calc(100vw - 4rem); /* Occupy the entire viewport width except the sidebar */
+    height: calc(100vh - 3.5rem); /* Occupy the entire viewport height except the navbar */
+    background-image: url('../../../assets/add.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .form-container {
+    background: rgba(0, 255, 255, 0.4); /* Semi-transparent cyan */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 500px !important;
+  }
+  
+  .join-form {
+    width: 100%;
+  }
+  
+  .header {
+    font-weight: bolder;
+    color: #003366;
+  }
+  

@@ -1,0 +1,104 @@
+.teacher-container {
+  background-color: #7DF9FF;
+  position: absolute;
+  top: 3.5rem; /* Adjust according to the navbar height */
+  left: 4rem; /* Adjust according to the sidebar width */
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 16px;
+  padding: 20px;
+  justify-content: flex-start; /* Aligns cards to start, preventing centering overflow */
+  align-items: flex-start; /* Aligns items to start, allows for a uniform top alignment */
+  background-image: url('../../../assets/img2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  overflow-x: hidden; /* No horizontal overflow */
+  overflow-y: auto; /* Enables vertical scrolling */
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.class-card {
+  flex: 0 1 21%; /* Default size for larger screens */
+  height: auto; /* Ensures the card height adjusts to content */
+  margin: 10px;
+  cursor: pointer;
+  background: rgba(253, 253, 150, 0.5) !important; /* More opacity for readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes space between card content */
+}
+
+.class-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.class-card img {
+  width: 100%; /* Ensures image covers the full width of the card */
+  height: 200px;
+  object-fit: cover; /* Ensures the image covers the specified height */
+}
+
+.card-header, .card-text {
+  color: rgba(0, 0, 128, 1) !important;
+}
+
+.card-header {
+  font-weight: 900 !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .teacher-container{
+    padding: 10px; /* Reduce padding for medium screens */
+  }
+  .class-card {
+    flex: 0 1 30% !important; /* 3 cards per row for medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .teacher-container{
+    padding: 5px; /* Reduce padding for smaller screens */
+  }
+  .class-card {
+    flex: 0 1 45% !important; /* 2 cards per row for tablets and small laptops */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .teacher-container{
+    padding: 5px; /* Reduce padding for smaller screens */
+  }
+  .class-card {
+    margin-left:4.5rem !important;
+    flex: 0 1 80% !important; /* 1 card per row for small devices (phones) */
+    height: auto;
+  }
+
+  .teacher-container {
+    padding: 10px; /* Reduce padding for smaller screens */
+    left: 0; /* Remove left positioning for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Hide or collapse sidebar on smaller screens */
+  .teacher-container{
+    padding: 5px; /* Reduce padding for smaller screens */
+  }
+  .sidebar {
+    display: none; /* Hides the sidebar */
+  }
+  
+  .teacher-container {
+    left: 0; /* No need for left offset as sidebar is hidden */
+    padding: 0; /* Remove padding for smaller screens */
+  }
+}

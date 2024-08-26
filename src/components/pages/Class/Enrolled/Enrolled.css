@@ -1,0 +1,59 @@
+/* src/Enrolled/Enrolled.css */
+
+.enrolled-container {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    position:absolute;
+    margin-top:5rem;
+    left:40% !important;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .student-item {
+    display: flex;
+    justify-content: space-between;
+    width:80% !important;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .remove-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .remove-btn:hover {
+    background-color: #c62828;
+  }
+  @media (max-width: 600px) {
+    .enrolled-container {
+        width: 80%; /* Increase width for small screens */
+        left:3.5rem !important;
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Adjust font size for small screens */
+    }
+
+    .student-item {
+        font-size: 0.7rem; /* Adjust font size for small screens */
+    }
+
+    .remove-btn {
+        padding: 0.2rem 0.4rem; /* Smaller button padding */
+        font-size: 0.7rem; /* Adjust button text size */
+    }
+}

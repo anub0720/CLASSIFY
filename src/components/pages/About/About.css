@@ -1,0 +1,54 @@
+.AboutUS-container {
+  background-color: rgba(125, 249, 255, 0.8); /* Slightly less transparent */
+  position: absolute;
+  top: 3.5rem; /* Adjust according to the navbar height */
+  height: calc(100vh - 3.5rem) !important;
+  background-image: url('../../../assets/about-us.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 4rem; /* Adjust according to the sidebar width */
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.about-content {
+  background-color: rgba(0, 255, 255, 0.5); /* Less transparent for better readability */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: blue; /* Bold white color */
+  font-weight: bold; /* Make the text bold */
+}
+
+.about-content p,li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* Bold white color */
+  font-weight: bold; /* Make the text bold */
+}
+
+.about-content h2, .about-content h3 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: blue; /* Bold white color */
+  font-weight: bold; /* Make the text bold */
+}
+
+.about-content strong {
+  color: #ffffff; /* Bold white color */
+  font-weight: bold; /* Make the text bold */
+}

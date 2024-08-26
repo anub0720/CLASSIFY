@@ -1,0 +1,155 @@
+/* Class.css */
+
+.class-container {
+  background-color: #7DF9FF;
+  position: absolute;
+  top: 3.5rem; /* Adjust according to the navbar height */
+  left: 4rem; /* Adjust according to the sidebar width */
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap to the next line */
+  flex-direction: row;
+  gap: 16px;
+  padding: 20px;
+  justify-content: flex-start; /* Aligns cards to start, preventing centering overflow */
+  align-items: flex-start; /* Aligns items to start, allows for a uniform top alignment */
+  background-image: url('../../../assets/class.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  overflow-x: hidden; /* No horizontal overflow */
+  overflow-y: auto; /* Enables vertical scrolling */
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  width: calc(100% - 4rem); /* Adjust width to fill the container minus the sidebar */
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 1rem;
+  width: 100%; /* Full width minus the sidebar width */
+  height: 100%;
+  color: #FFFFE9; /* Light blue color for text */
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sections {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow sections to wrap to the next row */
+  justify-content: space-between; /* Space out the sections */
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%; /* Ensure sections take up full width */
+  padding-left: 4rem; /* Add padding to prevent cutting off */
+}
+
+.section {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1;
+  text-align: center;
+  max-width: calc(33.33% - 2rem); /* Adjust section width to fit in a row */
+}
+
+.section:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content h1 {
+  font-weight: bolder;
+  color: #7DF9FF;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .class-container {
+    left: 0;
+    padding: 10px;
+    gap: 10px;
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .content {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .sections {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%; /* Full width */
+    padding-left: 0; /* Remove padding on smaller screens */
+  }
+
+  .section {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    max-width: calc(50% - 1rem); /* Adjust section width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .class-container {
+    padding: 5px;
+  }
+
+  .sections {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    left:3rem !important; /* Adjust margin */
+    gap: 0.5rem;
+    width: 100%; /* Full width */
+  }
+
+  .section {
+    padding: 0.5rem;
+    flex:0 1 45% !important; /* Adjust section width */
+    font-size: 0.8rem;
+    max-width: 100%; /* Full width */
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Specific adjustments for iPhone 14 Pro Max and similar screens */
+@media (max-width: 430px) {
+  .sections {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    left:3rem !important; /* Adjust margin */
+    gap: 0.5rem;
+    width: 100%; /* Full width */
+  }
+
+  .section {
+    padding: 0.5rem;
+    flex:0 1 45% !important; /* Adjust section width */
+    font-size: 0.8rem;
+    max-width: 100%; /* Full width */
+  }
+
+}

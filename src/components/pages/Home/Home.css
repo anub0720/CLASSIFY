@@ -1,0 +1,128 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Home Container Styling */
+.home-container {
+  position: fixed;
+  top: 56px; /* Height of the navbar */
+  left: 4rem; /* Width of the sidebar */
+  width: calc(100% - 4rem);
+  height: calc(100% - 56px);
+  background-image: url('../../../assets/image.png'); /* Update the path as needed */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow: auto;
+}
+
+/* Intro Content Styling */
+.intro-content {
+  background: rgba(0, 0, 0, 0.6);
+  color: #E0F7FA;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  margin: auto;
+}
+
+.intro-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro-content p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Calendar Styling */
+#calendar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFFFE9;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Responsive Styles */
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+  .home-container {
+    left: 0;
+    width: 100%;
+  }
+
+  .intro-content {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .intro-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-content p {
+    font-size: 1.1rem;
+  }
+
+  #calendar {
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 576px) {
+  .intro-content {
+    padding: 1rem;
+    max-width: 95%;
+  }
+
+  .intro-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro-content p {
+    font-size: 1rem;
+  }
+
+  #calendar {
+    top: 0.5rem;
+    left:50%;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+}

@@ -1,0 +1,131 @@
+.total-container {
+    position: absolute;
+    margin-top: 2.5rem;
+    width: 100%;
+    left: 0;
+    /* ;display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center */
+
+}
+
+.library-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 900px;
+    height: auto;
+    min-height: 300px;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 3.2rem;
+    position: absolute;
+    left: 50%; /* Centering the container */
+    transform: translateX(-50%);
+}
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.upload-container input[type="text"] {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+.upload-container input[type="file"] {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.upload-container button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-container button:hover {
+    background-color: #0056b3;
+}
+
+.files-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to new lines */
+    justify-content: space-evenly; /* Distributes space evenly between items */
+    gap: 20px; /* Adds more space between items */
+    width: 100%; /* Ensures the list occupies the full container width */
+    
+    position: absolute;
+    top: 21rem;
+}
+
+.file-card {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 0 200px; /* Ensures the card maintains a width of 200px */
+}
+
+.file-card strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.file-card a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.file-card a:hover {
+    color: #0056b3;
+}
+
+.file-card button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-card button:hover {
+    background-color: #cc0000;
+}
+
+.file-card a.hidden,
+.file-card button.hidden {
+    display: none;
+}

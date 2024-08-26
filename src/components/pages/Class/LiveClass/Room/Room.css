@@ -1,0 +1,66 @@
+.room-container {
+  background-image: url('../../../../../assets/room.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important; 
+  font-family: 'Lobster Two', cursive !important;
+  height: 100vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: blue !important;
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  padding: 1rem !important;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 10px !important;
+  width: 100vw !important;
+  overflow: hidden !important;
+}
+
+.meeting-container {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  .room-container {
+    font-size: 1.5rem !important;
+    padding: 0.5rem !important;
+  }
+
+  .meeting-container {
+    width: 100% !important;
+    height: calc(100vh - 2rem) !important; 
+    margin-top: 0 !important;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .room-container {
+    font-size: 1.75rem !important;
+    padding: 1rem !important;
+  }
+
+  .meeting-container {
+    width: 100% !important;
+    height: calc(100vh - 2rem) !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+  .room-container {
+    font-size: 2rem !important;
+    padding: 1rem !important;
+  }
+
+  .meeting-container {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
