@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/authContext';
 import { doSignOut } from '../../firebase/auth';
@@ -14,14 +14,17 @@ import student from '../../assets/student.svg';
 import AI from '../../assets/AI.svg';
 import info from '../../assets/about.svg';
 import add from '../../assets/add.svg';
+import join from '../../assets/join.svg';
+import PropTypes from 'prop-types';
+import logout from '../../assets/logout.svg';
 
-const Header = () => {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+const Header = ({ showAddClassIcon, showJoinIcon }) => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
   const navigate = useNavigate();
   const { userLoggedIn } = useAuth();
 
-  const toggleDropdown = () => {
-    setDropdownOpen((prevState) => !prevState);
+  const toggleSidebar = () => {
+    setSidebarOpen((prevState) => !prevState);
   };
 
   const handleSignOut = async () => {
@@ -31,8 +34,8 @@ const Header = () => {
 
   return (
     <div>
-      {/* Side Window for Dropdown */}
-      <div className={`dropdown-side-window ${isDropdownOpen ? 'open' : ''}`}>
+      {/* Sidebar */}
+      <div className={`dropdown-side-window ${isSidebarOpen ? 'open' : ''}`}>
         <div className="dropdown-content">
           <NavDropdown.Item href="/home">
             <img src={home} alt="Home icon" className="side-logo" />
@@ -57,48 +60,56 @@ const Header = () => {
             <span className="text">About Us</span>
           </NavDropdown.Item>
           <NavDropdown.Divider />
+          {userLoggedIn && (
+            <NavDropdown.Item className="logout" onClick={handleSignOut}>
+              <img src={logout} alt="LogOut icon" className="side-logo" />
+              <span className="text">Logout</span>
+            </NavDropdown.Item>
+          )}
         </div>
       </div>
 
       {/* Navbar */}
       <Navbar collapseOnSelect expand="lg" className="bg-primary" data-bs-theme="dark" fixed="top">
-        <Nav.Link onClick={toggleDropdown} className="explore" data-bs-theme="dark">
-          EXPLORE
-        </Nav.Link>
-        <Container>
-          <Navbar.Brand href="/home">
-            <img src={logo} alt="Website Logo" className="logo" />
+        <Container className="d-flex align-items-center justify-content-between">
+          <Nav.Link onClick={toggleSidebar} className="explore" data-bs-theme="dark">
+            EXPLORE
+          </Nav.Link>
+          <Navbar.Brand href="/home" className="d-flex align-items-center">
+            <img src={logo} alt="Website Logo" className="logo me-2" />
             <span className="navbar-brand">CLASSIFY</span>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <div className="d-flex align-items-center">
+            {userLoggedIn && (
+              <>
+                {showAddClassIcon && (
+                  <Nav.Link href="/add" className="plus d-flex align-items-center">
+                    <img src={add} alt="Add icon" className="icon-logo d-flex align-items-center" />
+                  </Nav.Link>
+                )}
+                {showJoinIcon && (
+                  <Nav.Link href="/join" className="join ml-auto d-flex align-items-center">
+                    <img src={join} alt="Join icon" className="icon-logo d-flex align-items-center" />
+                  </Nav.Link>
+                )}
+              </>
+            )}
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          </div>
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto"></Nav>
-            <Nav className="ml-auto">
-              {userLoggedIn ? (
-                <>
-                  <Nav.Link href="/add" className="plus">
-                    <img src={add} alt="Add icon" className="icon-logo" />
-                  </Nav.Link>
-                  <Nav.Link eventKey={2} className="icon" onClick={handleSignOut}>
-                    Logout
-                  </Nav.Link>
-                </>
-              ) : (
-                <>
-                  <Nav.Link href="/login" className="icon">
-                    Login
-                  </Nav.Link>
-                  <Nav.Link href="/register" className="icon">
-                    Register
-                  </Nav.Link>
-                </>
-              )}
+            <Nav className="ms-auto d-flex align-items-center">
+              {/* Additional nav items can be added here if needed */}
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </div>
   );
+};
+
+Header.propTypes = {
+  showAddClassIcon: PropTypes.bool,
+  showJoinIcon: PropTypes.bool,
 };
 
 export default Header;
