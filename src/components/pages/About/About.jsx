@@ -21,11 +21,9 @@ function About() {
       
 
         <h3>Contact Us</h3>
+        
         <p>
-          Feel free to reach out to us at:
-        </p>
-        <p>
-          <strong>Email:</strong> classifyteam.help@gmail.com
+          <strong>Email at:</strong> classifyteam.help@gmail.com
         </p>
       </div>
     </div>
