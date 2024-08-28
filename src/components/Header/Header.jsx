@@ -84,13 +84,13 @@ const Header = ({ showAddClassIcon, showJoinIcon }) => {
               <>
                 {showAddClassIcon && (
                   <Nav.Link href="/add" className="plus d-flex align-items-center">
-                    <span style={{color:"white"}}>Add Class</span>
+                    <span style={{color:"white"}} className="text">Add</span>
                     <img src={add} alt="Add icon" className="icon-logo d-flex align-items-center" />
                   </Nav.Link>
                 )}
                 {showJoinIcon && (
                   <Nav.Link href="/join" className="join ml-auto d-flex align-items-center">
-                     <span style={{color:"white"}}>Join Class</span>
+                     <span style={{color:"white"}} className="text">Join</span>
                     <img src={join} alt="Join icon" className="icon-logo d-flex align-items-center" style={{color:"white"}}/>
                   </Nav.Link>
                 )}

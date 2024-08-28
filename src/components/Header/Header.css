@@ -221,6 +221,9 @@ body {
     color: white;
     cursor: pointer;
   }
+  .text{
+    font-size:0.8rem !important
+  }
 }
 
 .icon-logo {
