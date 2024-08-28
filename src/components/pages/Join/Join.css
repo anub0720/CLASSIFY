@@ -36,5 +36,6 @@
     .join-container{
       position: absolute;
       left:0;
+      width:100%;
     }
   }
