@@ -106,7 +106,7 @@ body, html {
 /* Mobile devices */
 @media (max-width: 576px) {
   .intro-content {
-    padding: 1rem;
+    padding: 1.5rem;
     max-width: 95%;
   }
 
