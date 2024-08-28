@@ -178,6 +178,14 @@ body {
 }
 
 @media (max-width: 576px) {
+  .dropdown-side-window {
+    display: none; /* Hide sidebar on small screens by default */
+  }
+
+  .dropdown-side-window.open {
+    display: block; /* Show sidebar only when open */
+    width: 10.5rem; /* Adjust width as needed */
+  }
   .navbar {
     padding: 0.5rem 0.5rem; /* Adjust padding for better fit */
     background-color: rgba(0, 0, 139, 1); /* Deep blue background */

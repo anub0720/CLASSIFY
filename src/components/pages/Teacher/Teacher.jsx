@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
+
 import './Teacher.css';
 import { getAuth } from 'firebase/auth'; 
 import image1 from '../../../assets/image1.png';
@@ -39,7 +40,7 @@ const Teacher = () => {
   const handleClassClick = (classId) => {
     navigate(`/class/${classId}`);
   };
-
+ 
   const images = [image1, image2, image3, image4];
 
   const getRandomImage = () => {
@@ -49,7 +50,11 @@ const Teacher = () => {
   return (
     <div>
       <h1>Teacher Dashboard</h1>
+     
       <div className="teacher-container">
+      
+     
+
         {classes.map((classItem) => (
           <Card key={classItem._id} className="class-card" onClick={() => handleClassClick(classItem._id)}>
             <Card.Img variant="top" src={getRandomImage()} alt="Class image" />
