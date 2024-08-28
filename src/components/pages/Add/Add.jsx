@@ -50,6 +50,7 @@ const Add = () => {
       <div className="form-container">
         <Form onSubmit={handleSubmit} className="add-form">
           <Form.Group controlId="formClassName">
+            <h1 style={{color:"blue"}}>Add Class</h1>
             <Form.Label className="header"><b>Class Name:</b></Form.Label>
             <Form.Control
               type="text"

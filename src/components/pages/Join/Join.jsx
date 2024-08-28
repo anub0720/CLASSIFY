@@ -51,6 +51,7 @@ const Join = () => {
       <div className="form-container">
         <Form onSubmit={handleSubmit} className="join-form">
           <Form.Group controlId="formClassName">
+            <h1 style={{color:"blue"}}>Join Class</h1>
             <Form.Label className="header"><b>Class Name:</b></Form.Label>
             <Form.Control
               type="text"
