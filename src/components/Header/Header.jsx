@@ -94,7 +94,7 @@ const Header = ({ showAddClassIcon, showJoinIcon }) => {
                 )}
               </>
             )}
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          
           </div>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto d-flex align-items-center">

@@ -63,7 +63,7 @@ body {
 
 .explore {
   padding-left: 1rem !important;
-  padding-right: 1rem !important;
+  padding-right: 0.5rem !important;
   color: white !important;
   font-size: 1rem; /* Ensure consistency */
 }
@@ -192,7 +192,7 @@ body {
   }
   
   .navbar-brand {
-    font-size: 1.25rem; /* Adjust as needed */
+    font-size: 1rem; /* Adjust as needed */
     color: white;
     display: flex;
     align-items: center;
@@ -217,7 +217,7 @@ body {
   }
   
   .explore {
-    font-size: 1rem; /* Adjust font size for better visibility */
+    font-size: 0.8rem; /* Adjust font size for better visibility */
     color: white;
     cursor: pointer;
   }
