@@ -25,6 +25,7 @@
   max-width: 600px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: left;
+
 }
 
 .about-content h1 {
@@ -52,3 +53,9 @@
   color: #ffffff; /* Bold white color */
   font-weight: bold; /* Make the text bold */
 }
+@media screen and (max-width: 576px){
+    .about-content{
+      position: absolute !important;
+      top:2rem !important;
+    }
+  }
