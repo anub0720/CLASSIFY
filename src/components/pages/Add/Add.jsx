@@ -12,7 +12,9 @@ const Add = () => {
   const [grade, setGrade] = useState('');
   const [userEmail, setUserEmail] = useState(null);
   const navigate = useNavigate();
-
+  const baseURL = import.meta.env.MODE === 'production'
+    ? import.meta.env.VITE_SERVER_URL
+    : 'http://localhost:8080';
   useEffect(() => {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
@@ -36,7 +38,7 @@ const Add = () => {
     };
 
     try {
-      await axios.post('http://localhost:8080/classes/newclass', newClass);
+      await axios.post(`${baseURL}/classes/newclass`, newClass);
       navigate('/teacher');
     } catch (error) {
       console.error('Error creating class:', error);

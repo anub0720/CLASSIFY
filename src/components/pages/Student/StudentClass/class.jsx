@@ -13,11 +13,14 @@ const ClasS = () => {
   //const [showSchedule, setShowSchedule] = useState(false);
   const [showLiveClass, setShowLiveClass] = useState(false);
   const [showLibrary, setShowLibrary] = useState(false);
+  const baseURL = import.meta.env.MODE === 'production'
+    ? import.meta.env.VITE_SERVER_URL
+    : 'http://localhost:8080';
   useEffect(() => {
     const fetchClassDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/classes/getclass/${classId}`
+          `${baseURL}/classes/getclass/${classId}`
         );
         setClassDetails(response.data);
       } catch (error) {
@@ -26,7 +29,7 @@ const ClasS = () => {
     };
 
     fetchClassDetails();
-  }, [classId]);
+  }, [classId,baseURL]);
   const handleSectionClickAnnounce = (section) => {
     if (section === "Announcements") {
       setShowAnnouncement(true);

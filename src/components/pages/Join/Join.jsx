@@ -12,7 +12,9 @@ const Join = () => {
   const [error, setError] = useState('');
   const [userEmail, setUserEmail] = useState(null);
   const navigate = useNavigate();
-
+  const baseURL = import.meta.env.MODE === 'production'
+    ? import.meta.env.VITE_SERVER_URL
+    : 'http://localhost:8080';
   useEffect(() => {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
@@ -35,7 +37,7 @@ const Join = () => {
     };
 
     try {
-      await axios.post('http://localhost:8080/classes/joinclass', joinClassData);
+      await axios.post(`${baseURL}/classes/joinclass`, joinClassData);
       navigate('/student');
     } catch (error) {
       console.error('Error joining class:', error);

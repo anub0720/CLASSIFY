@@ -6,11 +6,13 @@ import './Announcement.css';
 const Announcement = ({ classId }) => {
   const [announcements, setAnnouncements] = useState([]);
  // const [newAnnouncement, setNewAnnouncement] = useState('');
-
+ const baseURL = import.meta.env.MODE === 'production'
+ ? import.meta.env.VITE_SERVER_URL
+ : 'http://localhost:8080';
   useEffect(() => {
     const fetchAnnouncements = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/announcement/${classId}`);
+        const response = await axios.get(`${baseURL}/announcement/${classId}`);
         setAnnouncements(response.data);
       } catch (error) {
         console.error('Error fetching announcements:', error);
@@ -18,7 +20,7 @@ const Announcement = ({ classId }) => {
     };
 
     fetchAnnouncements();
-  }, [classId]);
+  }, [classId,baseURL]);
 
  
 

@@ -16,11 +16,13 @@ const ClasS = () => {
   const [showLiveClass, setShowLiveClass] = useState(false);
   const [showLibrary, setShowLibrary] = useState(false);
   const [showEnrolled, setShowEnrolled] = useState(false); // State for Enrolled section
-
+  const baseURL = import.meta.env.MODE === 'production'
+    ? import.meta.env.VITE_SERVER_URL
+    : 'http://localhost:8080';
   useEffect(() => {
     const fetchClassDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/classes/getclass/${classId}`);
+        const response = await axios.get(`${baseURL}/classes/getclass/${classId}`);
         setClassDetails(response.data);
       } catch (error) {
         console.error("Error fetching class details:", error);
@@ -28,7 +30,7 @@ const ClasS = () => {
     };
 
     fetchClassDetails();
-  }, [classId]);
+  }, [classId, baseURL]);
 
   const handleSectionClick = (section) => {
     setShowAnnouncement(section === "Announcements");

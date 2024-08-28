@@ -15,7 +15,10 @@ const Chatpage = () => {
   const apiKey = import.meta.env.VITE_API_KEY;
   const genAI = new GoogleGenerativeAI(apiKey);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
+  
+  const baseURL = import.meta.env.MODE === 'production'
+    ? import.meta.env.VITE_SERVER_URL
+    : 'http://localhost:8080';
   useEffect(() => {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
@@ -42,12 +45,12 @@ const Chatpage = () => {
     };
 
     initializeChat();
-  }, [chatHistory]);
+  }, [chatHistory,model]);
 
   // Function to fetch chat history
   const fetchChatHistory = async (email) => {
     try {
-      const res = await fetch(`http://localhost:8080/Chatpage/getChatHistory?email=${encodeURIComponent(email)}`);
+      const res = await fetch(`${baseURL}/Chatpage/getChatHistory?email=${encodeURIComponent(email)}`);
       if (!res.ok) {
         throw new Error("Failed to fetch chat history");
       }
@@ -92,7 +95,7 @@ const Chatpage = () => {
 
       // Send data to backend
       if (userEmail) {
-        const res = await fetch('http://localhost:8080/Chatpage/saveChat', {
+        const res = await fetch(`${baseURL}/Chatpage/saveChat`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -123,7 +126,7 @@ const Chatpage = () => {
   const clearChat = async () => {
     setChatHistory([]);
     try {
-      const response = await fetch('http://localhost:8080/Chatpage/clearChat', {
+      const response = await fetch(`${baseURL}/Chatpage/clearChat`, {
         method: 'DELETE',
       });
       const result = await response.json();

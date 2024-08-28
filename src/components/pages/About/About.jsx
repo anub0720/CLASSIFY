@@ -26,7 +26,7 @@ function About() {
           us at:
         </p>
         <p>
-          <strong>Email:</strong> support@classify.com
+          <strong>Email:</strong> classifyteam.help@gmail.com
         </p>
       </div>
     </div>

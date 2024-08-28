@@ -13,24 +13,26 @@ import image4 from '../../../assets/image4.png';
 
 const Student = () => {
   const [classes, setClasses] = useState([]);
-  const [userEmail, setUserEmail] = useState(null);
+  //const [userEmail, setUserEmail] = useState(null);
   const navigate = useNavigate();
-
+  const baseURL = import.meta.env.MODE === 'production'
+    ? import.meta.env.VITE_SERVER_URL
+    : 'http://localhost:8080';
   useEffect(() => {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        setUserEmail(user.email);
+        //setUserEmail(user.email);
         fetchClasses(user.email);
       } else {
-        setUserEmail(null);
+        //setUserEmail(null);
       }
     });
-  }, []);
+  }, [baseURL]);
 
   const fetchClasses = async (email) => {
     try {
-      const response = await axios.get(`http://localhost:8080/classes/studentclasses/${email}`);
+      const response = await axios.get(`${baseURL}/classes/studentclasses/${email}`);
       setClasses(response.data);
     } catch (error) {
       console.error('Error fetching classes:', error);

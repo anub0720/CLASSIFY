@@ -6,11 +6,13 @@ import "./Enrolled.css";
 import PropTypes from 'prop-types';
 const Enrolled = ({ classId }) => {
   const [students, setStudents] = useState([]);
-
+  const baseURL = import.meta.env.MODE === 'production'
+    ? import.meta.env.VITE_SERVER_URL
+    : 'http://localhost:8080';
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/classes/getclass/${classId}`);
+        const response = await axios.get(`${baseURL}/classes/getclass/${classId}`);
         setStudents(response.data.studentEmails);
       } catch (error) {
         console.error("Error fetching enrolled students:", error);
@@ -18,11 +20,11 @@ const Enrolled = ({ classId }) => {
     };
 
     fetchStudents();
-  }, [classId]);
+  }, [classId, baseURL]);
 
   const handleRemoveStudent = async (studentEmail) => {
     try {
-      await axios.post("http://localhost:8080/classes/removeStudent", {
+      await axios.post(`${baseURL}/classes/removeStudent`, {
         classId,
         studentEmail,
       });
