@@ -48,3 +48,10 @@
 .chat-button.mt-4 {
   margin-top: 1rem;
 }
+@media screen and (max-width: 576px){
+  .chatpage-container{
+    position: absolute;
+    left:0;
+    width:100%;
+  }
+}
