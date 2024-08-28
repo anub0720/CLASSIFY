@@ -64,3 +64,11 @@
     height: 100% !important;
   }
 }
+@media screen and (max-width: 576px){
+  .meeting-container{
+    width:100vw !important;
+    position:absolute !important;
+    top:2rem !important;
+    height:calc(99vh - 2rem) !important;
+  }
+}

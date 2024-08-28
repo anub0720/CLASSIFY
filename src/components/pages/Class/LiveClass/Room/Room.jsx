@@ -65,7 +65,7 @@ function Room() {
         id="meeting"
         className="meeting-container"
         ref={meetingUI}
-        style={{ width: "100vw", height: "100vh" }}
+        
       ></div>
     </div>
   );
