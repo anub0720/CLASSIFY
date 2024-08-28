@@ -32,4 +32,9 @@
     font-weight: bolder;
     color: #003366;
   }
-  
+  @media screen and (max-width: 576px){
+    .join-container{
+      position: absolute;
+      left:0;
+    }
+  }
