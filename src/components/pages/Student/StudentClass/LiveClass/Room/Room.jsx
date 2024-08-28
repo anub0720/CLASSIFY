@@ -29,10 +29,10 @@ function Room() {
     window.location.reload();
   };
   async function meetingUI(element) {
-    //const appId = 1883825350;
+    
     const appId = parseInt(import.meta.env.VITE_APP_ID, 10);
 
-//const serverSecret="367ca8d85b26ffa2a05fb7794c90e124";
+
 const serverSecret = import.meta.env.VITE_SERVER_SECRET;
     console.log("App ID:", import.meta.env.VITE_APP_ID);
 console.log("Server Secret:", import.meta.env.VITE_SERVER_SECRET);
