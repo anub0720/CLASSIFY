@@ -164,7 +164,7 @@
     height: 100vh !important;
   }
 }
-@media (max-width: 576px){
+/* @media (max-width: 576px){
   .total-container{
       height:45vh !important;
       margin-bottom: 1rem !important;
@@ -177,4 +177,4 @@
     top:10rem !important;
     margin-top: 10rem !important;
   }
-}
+} */
