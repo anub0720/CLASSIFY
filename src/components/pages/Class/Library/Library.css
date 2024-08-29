@@ -80,6 +80,8 @@
     
     position: absolute;
     top: 21rem;
+    /* height: 40vh !important;
+    overflow-y: auto !important; */
 }
 
 .file-card {
@@ -128,4 +130,40 @@
 .file-card a.hidden,
 .file-card button.hidden {
     display: none;
+}
+@media (max-width: 768px) {
+    .library-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .upload-container input[type="text"],
+    .upload-container input[type="file"] {
+        max-width: 100%;
+    }
+
+    .files-list {
+        max-height: 35vh;
+    }
+
+    .file-card {
+        width: 180px;
+        flex: 1 0 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .library-container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .files-list {
+        max-height: 30vh;
+    }
+
+    .file-card {
+        width: 150px;
+        flex: 1 0 150px;
+    }
 }

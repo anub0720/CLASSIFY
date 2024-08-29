@@ -127,5 +127,6 @@ body, html {
   }
   .home-container{
     height:100vh !important;
+    overflow-y: auto !important;
   }
 }

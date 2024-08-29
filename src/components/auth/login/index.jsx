@@ -73,6 +73,7 @@ const Login = () => {
                 autoComplete="email"
                 required
                 value={email}
+                style={{color:"black"}}
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
@@ -89,6 +90,7 @@ const Login = () => {
                 autoComplete="current-password"
                 required
                 value={password}
+                style={{color:"black"}}
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}

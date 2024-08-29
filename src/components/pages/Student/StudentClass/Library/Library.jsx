@@ -40,7 +40,9 @@ function Library() {
         ))}
       </div>
 
-      {files.length === 0 && <p style={{color:"#7df9ff",size:"medium"}}>No files available</p>}
+      {files.length === 0 && (
+        <p style={{ color: "#7df9ff", size: "medium" }}>No files available</p>
+      )}
     </div>
   );
 }

@@ -54,5 +54,15 @@
     left:0;
     width:100%;
     height:100vh;  
+    padding-left: 0; /* Remove left padding for small screens */
+    padding-right: 0; /* Remove right padding for small screens */
+    min-height: 100vh;  
+    overflow-y: auto;
+  }
+  .chat-container {
+    width: 100%;
+    padding: 1rem;
+    max-height: 65vh !important; /* Ensure it doesn't exceed the viewport height */
+    overflow-y: auto; /* Ensure scrolling is enabled */
   }
 }
