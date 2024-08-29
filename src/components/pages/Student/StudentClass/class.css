@@ -154,5 +154,10 @@
     .class-container{
       height:100vh !important;
     }
+    .sections{
+      position:absolute;
+      top:1.25rem;
+      
+    }
   }
   
