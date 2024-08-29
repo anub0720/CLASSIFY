@@ -102,6 +102,7 @@
   .teacher-container {
     left: 0; /* No need for left offset as sidebar is hidden */
     padding: 0; /* Remove padding for smaller screens */
+    height: 100vh !important; /* Full height for smaller screens */
   }
 }
 .button-container {

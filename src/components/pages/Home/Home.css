@@ -125,4 +125,7 @@ body, html {
     font-size: 0.8rem;
     padding: 0.4rem 0.6rem;
   }
+  .home-container{
+    height:100vh !important;
+  }
 }

@@ -150,4 +150,9 @@
       font-size: 0.75rem; /* Reduce font size */
     }
   }
+  @media (max-width:576px){
+    .class-container{
+      height:100vh !important;
+    }
+  }
   

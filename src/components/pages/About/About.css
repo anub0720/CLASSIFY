@@ -57,5 +57,6 @@
     .about-content{
       position: absolute !important;
       top:2rem !important;
+      height:auto;
     }
   }

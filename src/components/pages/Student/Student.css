@@ -85,6 +85,7 @@
   .student-container {
     padding: 10px; /* Reduce padding for smaller screens */
     left: 0; /* Remove left positioning for smaller screens */
+    height:100vh !important;
   }
 }
 

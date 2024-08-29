@@ -160,4 +160,7 @@
     margin-left: 0 !important;
     right:1rem !important;
   }
+  .class-container{
+    height: 100vh !important;
+  }
 }
