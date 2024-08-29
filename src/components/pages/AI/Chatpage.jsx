@@ -138,14 +138,14 @@ const Chatpage = () => {
 
   return (
     <div className="chatpage-container">
-      <h1 className="text-3xl font-bold text-center mb-4">Chatbot</h1>
+      {/* <h1 className="text-3xl font-bold text-center mb-4">Chatbot</h1> */}
 
       <div className="chat-container rounded-lg shadow-md p-4">
         <ChatHistory chatHistory={chatHistory} />
         <Loading isLoading={isLoading} />
       </div>
 
-      <div className="flex mt-4 justify-center items-center">
+      <div className="flex mt-4 send justify-center items-center">
         <input
           type="text"
           className="chat-input"
@@ -154,7 +154,7 @@ const Chatpage = () => {
           onChange={handleUserInput}
         />
         <button
-          className={`chat-button ${isLoading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"}`}
+          className={`chat-button  ${isLoading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"}`}
           onClick={sendMessage}
           disabled={isLoading}
           style={{ backgroundColor: "#00BFFF" }}
@@ -163,7 +163,7 @@ const Chatpage = () => {
         </button>
       </div>
       <button
-        className={`chat-button mt-4 ${isLoading ? "bg-gray-400" : "bg-gray-400 hover:bg-gray-500"}`}
+        className={`chat-button clear mt-4 ${isLoading ? "bg-gray-400" : "bg-gray-400 hover:bg-gray-500"}`}
         onClick={clearChat}
         style={{ backgroundColor: "#00BFFF" }}
       >

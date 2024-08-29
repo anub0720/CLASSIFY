@@ -65,6 +65,14 @@
     max-height: 50vh !important; /* Ensure it doesn't exceed the viewport height */
     overflow-y: auto; /* Ensure scrolling is enabled */
     position:absolute;
-    top:12rem;
+    top:6rem;
+  }
+  .send{
+    position: absolute;
+    top:10rem;
+  }
+  .clear{
+    position: absolute;
+    top:15rem;
   }
 }
