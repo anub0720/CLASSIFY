@@ -69,3 +69,9 @@
 .hidden {
     display: none;
 }
+@media (max-width: 576px){
+    .total-container{
+        height:45vh !important;
+        margin-bottom: 1rem !important;
+    }
+}

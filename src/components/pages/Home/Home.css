@@ -108,6 +108,7 @@ body, html {
   .intro-content {
     padding: 1.5rem;
     max-width: 95%;
+    height:40vh !important;
   }
 
   .intro-content h1 {

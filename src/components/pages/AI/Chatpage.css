@@ -62,7 +62,7 @@
   .chat-container {
     width: 100%;
     padding: 1rem;
-    max-height: 65vh !important; /* Ensure it doesn't exceed the viewport height */
+    max-height: 50vh !important; /* Ensure it doesn't exceed the viewport height */
     overflow-y: auto; /* Ensure scrolling is enabled */
   }
 }
