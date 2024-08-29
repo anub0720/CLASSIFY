@@ -73,5 +73,7 @@
     .total-container{
         height:45vh !important;
         margin-bottom: 1rem !important;
+        position:absolute;
+        top: 2rem !important;
     }
 }
