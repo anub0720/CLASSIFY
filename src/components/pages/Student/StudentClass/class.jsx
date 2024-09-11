@@ -63,41 +63,47 @@ const ClasS = () => {
         <br />
 
         <div className="sections" style={{marginTop:"3rem"}}>
-          <div className="section" style={{ cursor: "pointer" }}>
+          <div className="section" style={{ cursor: "pointer" }}
+          onClick={() => {
+            handleSectionClickAnnounce("Announcements");
+            handleSectionClickLiveClass("Announcements");
+            handleSectionClickLibrary("Announcements");
+          }}
+          >
             <span
               className="announce-text"
-              onClick={() => {
-                handleSectionClickAnnounce("Announcements");
-                handleSectionClickLiveClass("Announcements");
-                handleSectionClickLibrary("Announcements");
-              }}
+              
             >
               ANNOUNCEMENTS
             </span>
             {showAnnouncement && <Announcement classId={classId} />}
           </div>
-          <div className="section" style={{ cursor: "pointer" }}>
+          <div className="section" style={{ cursor: "pointer" }}
+            onClick={() => {
+              handleSectionClickAnnounce("Live Class");
+              handleSectionClickLiveClass("Live Class");
+              handleSectionClickLibrary("Live Class");
+            }}
+          >
             <span
               className="liveclass-text"
-              onClick={() => {
-                handleSectionClickAnnounce("Live Class");
-                handleSectionClickLiveClass("Live Class");
-                handleSectionClickLibrary("Live Class");
-              }}
+            
             >
               Live Class
             </span>
             {showLiveClass && <Class classId={classId} />}
           </div>
          
-          <div className="section" style={{ cursor: "pointer" }}>
+          <div className="section" style={{ cursor: "pointer" }}
+          onClick={() => {
+            handleSectionClickAnnounce("Library");
+            handleSectionClickLiveClass("Library");
+            handleSectionClickLibrary("Library");
+          }}
+          >
             <span
               className="library-text"
-              onClick={() => {
-                handleSectionClickAnnounce("Library");
-                handleSectionClickLiveClass("Library");
-                handleSectionClickLibrary("Library");
-              }}
+              
             >
               Library
             </span>

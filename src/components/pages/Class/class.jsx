@@ -51,37 +51,37 @@ const ClasS = () => {
         <br />
 
         <div className="sections" style={{marginTop:"3rem"}}>
-          <div className="section" style={{ cursor: "pointer" }}>
+          <div className="section" style={{ cursor: "pointer" }} onClick={() => handleSectionClick("Announcements")}>
             <span
               className="announce-text"
-              onClick={() => handleSectionClick("Announcements")}
+              
             >
               Announcements
             </span>
             {showAnnouncement && <Announcement classId={classId} />}
           </div>
-          <div className="section" style={{ cursor: "pointer" }}>
+          <div className="section" style={{ cursor: "pointer" }}  onClick={() => handleSectionClick("Live Class")}>
             <span
               className="liveclass-text"
-              onClick={() => handleSectionClick("Live Class")}
+             
             >
               Live Class
             </span>
             {showLiveClass && <Class classId={classId} />}
           </div>
-          <div className="section" style={{ cursor: "pointer" }}>
+          <div className="section" style={{ cursor: "pointer" }}  onClick={() => handleSectionClick("Library")}>
             <span
               className="library-text"
-              onClick={() => handleSectionClick("Library")}
+             
             >
               Library
             </span>
             {showLibrary && <Library classId={classId} />}
           </div>
-          <div className="section" style={{ cursor: "pointer" }}>
+          <div className="section" style={{ cursor: "pointer" }}  onClick={() => handleSectionClick("Enrolled")}>
             <span
               className="enrolled-text"
-              onClick={() => handleSectionClick("Enrolled")}
+             
             >
               Enrolled Students
             </span>
